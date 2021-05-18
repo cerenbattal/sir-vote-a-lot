@@ -1,0 +1,12 @@
+.header {
+    font-size: 48px;
+    color: #FFFFFF;
+    padding: 0.5em 0.5em 0 0.5em;
+    text-align: center;
+}
+
+h1 {
+    display: inline;
+    font-family: 'Pattaya', sans-serif;
+    font-weight: 100;
+}
