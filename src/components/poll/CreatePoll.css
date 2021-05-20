@@ -6,3 +6,29 @@
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     min-height: 600px;
 }
+
+.footer {
+    position: absolute;
+    bottom: 1%;
+    left: 0;
+    margin-right: 35%;
+    width: 100%;
+    padding: 15px 20px;
+}
+
+.footer > p {
+    float: left;
+    margin-left: 0.5em;
+}
+
+@media screen and (min-width: 391px) {
+    .footer > p {
+      font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .footer > p {
+      font-size: 12px;
+    }
+}
