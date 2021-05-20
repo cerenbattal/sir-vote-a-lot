@@ -6,3 +6,12 @@
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     min-height: 600px;
 }
+
+.vote-footer {
+    position: absolute;
+    bottom: 1%;
+    left: 0;
+    margin-right: 35%;
+    width: 100%;
+    padding: 15px 20px;
+}

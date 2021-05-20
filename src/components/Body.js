@@ -5,14 +5,14 @@ import Chart from './chart/Chart'
 
 export default function Body() {
     return (
-        <div class="ui three column stackable centered grid container">
-            <div class="column">
+        <div className="ui three column stackable centered grid container">
+            <div className="column">
                 <CreatePoll />
             </div>
-            <div class="column">
+            <div className="column">
                 <Vote />
             </div>
-            <div class="column">
+            <div className="column">
                 <Chart />
             </div>
         </div>

@@ -2,7 +2,12 @@
     background-color: #F7F7F7; 
     text-align: center;
     border-radius: 5px;
-    padding: 10px 25px;
+    padding: 1em;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     min-height: 600px;
+}
+
+.footer > p {
+    float: left;
+    margin-left: 0.5em;
 }
