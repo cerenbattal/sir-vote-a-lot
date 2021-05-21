@@ -3,7 +3,7 @@ import './Vote.css'
 
 export default function Vote() {
     return (
-        <div className="vote">
+        <div data-testid="vote-test" className="vote">
             <div className="ui form">
                 <div className="grouped fields">
                     <div className="ui piled segment">
