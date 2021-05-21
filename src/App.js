@@ -1,13 +1,16 @@
 import Body from './components/Body';
-import Header from './components/Header';
+import Header from './components/header/Header';
+import { Provider } from './context/GlobalContext';
 
 function App() {
   return (
-    <div className="App">
-      <Header/>
-      <div className="ui divider"></div>
-      <Body/>
-    </div>
+    <Provider>
+      <div className="App">
+        <Header />
+        <div className="ui divider"></div>
+        <Body />
+      </div>
+    </Provider>
   );
 }
 
