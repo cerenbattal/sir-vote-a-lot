@@ -33,3 +33,9 @@ $ npm run build
 ```bash
 $ npm start
 ```
+
+- Start tests:
+
+```bash
+$ npm run test
+```
