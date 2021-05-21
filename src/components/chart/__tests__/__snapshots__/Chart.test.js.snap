@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="chart"
+  data-testid="chart-test"
+>
+  <div
+    className="recharts-responsive-container"
+    style={
+      Object {
+        "height": 300,
+        "maxHeight": undefined,
+        "minHeight": undefined,
+        "minWidth": undefined,
+        "width": "99%",
+      }
+    }
+  />
+  <div
+    className="footer"
+  >
+    <p>
+      Total votes: 1
+    </p>
+  </div>
+</div>
+`;
