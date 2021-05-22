@@ -1,23 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { Context } from '../../context/GlobalContext';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from "recharts";
 import './Chart.css'
 
-const data = [
-    {
-        name: 'Page A',
-        amt: 2400,
-    },
-    {
-        name: 'Page B',
-        amt: 2210,
-    },
-    {
-        name: 'Page C',
-        amt: 2290,
-    }
-];
-
 export default function SimpleBarChart() {
+    const { state } = useContext(Context);
+    const data = state.answers;
+
     return (
         <ResponsiveContainer width={'99%'} height={300} aspect={1}>
             <BarChart
@@ -32,11 +21,11 @@ export default function SimpleBarChart() {
                 }}
             >
                 <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="name" />
-                <YAxis />
+                <XAxis dataKey="answer" />
+                <YAxis dataKey="score"/>
                 <Tooltip />
                 <Legend />
-                <Bar dataKey="amt" fill="#8884d8" />
+                <Bar dataKey="score" fill="#8884d8" />
                 </BarChart>
         </ResponsiveContainer>
     )

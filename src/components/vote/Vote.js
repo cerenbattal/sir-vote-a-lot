@@ -1,31 +1,35 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { Context } from '../../context/GlobalContext';
 import './Vote.css'
 
 export default function Vote() {
+    const { state } = useContext(Context);
     return (
         <div data-testid="vote-test" className="vote">
-            <div className="ui form">
-                <div className="grouped fields">
-                    <div className="ui piled segment">
-                        <p>eos choro alterum definiebas in. Vim dolorum definiebas an. Mei ex natum rebum iisque.</p>
-                    </div>
-                    <div className="field">
-                        <div className="ui checkbox">
-                            <input type="checkbox" name="example2" checked="checked" />
-                            <label>Once a week</label>
+            {state.isCreated ? (
+                <>
+                    <div className="ui form">
+                        <div className="grouped fields">
+                            <div className="ui piled segment">
+                                <p>{state.question}</p>
+                            </div>
+                            {state.answers.map((ans) => {
+                                return (
+                                    <div className="field">
+                                        <div className="ui checkbox">
+                                            <input type="checkbox"/>
+                                            <label>{ans.answer}</label>
+                                        </div>
+                                    </div>
+                                );
+                            })}
                         </div>
                     </div>
-                    <div className="field">
-                        <div className="ui checkbox">
-                            <input type="checkbox" name="example2" />
-                            <label>Once a day</label>
-                        </div>
+                    <div className="vote-footer">
+                        <div className="small ui right floated button">Vote</div>
                     </div>
-                </div>
-            </div>
-            <div className="vote-footer">
-                <div className="small ui right floated button">Vote</div>
-            </div>
+                </>
+            ) : 'has not created yet!'}
         </div>
     )
 }
