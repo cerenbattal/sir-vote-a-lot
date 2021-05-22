@@ -25,7 +25,7 @@ export default function Answer() {
             {
                 state.answers.length < 10 ? (
                     <div className="ui fluid icon input">
-                        <input type="text" placeholder="Type an answer" maxlength="80" defaultValue="" onChange={event => setAnswer(event.target.value)} />
+                        <input type="text" placeholder="Type an answer" maxLength="80" defaultValue="" onChange={event => setAnswer(event.target.value)} />
                         <i className="circular plus link icon" onClick={
                             () => {
                                 addAnswer(answer);

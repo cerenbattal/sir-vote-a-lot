@@ -3,6 +3,7 @@ import { Context } from '../../context/GlobalContext';
 import SimpleBarChart from './SimpleBarChart'
 import './Chart.css'
 
+
 export default function Chart() {
     const { state } = useContext(Context);
     return (
@@ -11,7 +12,7 @@ export default function Chart() {
                 <>
                 <SimpleBarChart data-testid="barchart-test"/>
                 <div className="footer">
-                    <p>Total votes: 1</p>
+                    <p>Total votes: {state.voteCount}</p>
                 </div>
                 </>
             ) : 'has not created yet!'}

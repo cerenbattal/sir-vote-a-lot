@@ -11,7 +11,7 @@ export default function CreatePoll() {
     return (
         <div className="poll">
             <div className="ui fluid icon input">
-                <input type="text" placeholder="Type a question..." maxlength="80" onChange={event => setQuestion(event.target.value)} />
+                <input type="text" placeholder="Type a question..." maxLength="80" onChange={event => setQuestion(event.target.value)} />
             </div>
             <Answer />
             <div className="footer">
@@ -24,13 +24,15 @@ export default function CreatePoll() {
                 >
                     {state.isCreated ? 'Update' : 'Create'}
                 </div>
-                <div className="small ui right floated button"
+                {state.isCreated ? (
+                    <div className="small ui right floated button"
                     onClick={
                         () => {
                             resetPoll();
                         }
                     }
                 >Reset</div>
+                ) : null}
                 <p>{state.answers.length}/10 possible answers</p>
             </div>
         </div>
