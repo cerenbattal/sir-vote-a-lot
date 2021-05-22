@@ -10,7 +10,7 @@ export default function SimpleBarChart() {
     return (
         <ResponsiveContainer width={'99%'} height={300} aspect={1}>
             <BarChart
-                width={400}
+                width={450}
                 height={500}
                 data={data}
                 margin={{

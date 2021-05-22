@@ -1,9 +1,10 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { Context } from '../../context/GlobalContext';
 import './Vote.css'
 
 export default function Vote() {
-    const { state } = useContext(Context);
+    const { state, addVote} = useContext(Context);
+    const [checkedAnswer, setCheckedAnswer] = useState('');
     return (
         <div data-testid="vote-test" className="vote">
             {state.isCreated ? (
@@ -17,8 +18,12 @@ export default function Vote() {
                                 return (
                                     <div className="field">
                                         <div className="ui checkbox">
-                                            <input type="checkbox"/>
-                                            <label>{ans.answer}</label>
+                                            <input name={`checkbox-${ans.answer}`} type="checkbox" key={ans.id} onChecked={
+                                                () => {
+                                                    setCheckedAnswer(ans.answer)
+                                                }
+                                            }/>
+                                            <label for={`checkbox-${ans.answer}`}>{ans.answer}</label>
                                         </div>
                                     </div>
                                 );
@@ -26,7 +31,15 @@ export default function Vote() {
                         </div>
                     </div>
                     <div className="vote-footer">
-                        <div className="small ui right floated button">Vote</div>
+                        <div className="small ui right floated button"
+                            onClick={
+                                () => {
+                                    console.log(checkedAnswer)
+                                    addVote(checkedAnswer);
+                                    setCheckedAnswer('');
+                                }
+                            }
+                        >Vote</div>
                     </div>
                 </>
             ) : 'has not created yet!'}

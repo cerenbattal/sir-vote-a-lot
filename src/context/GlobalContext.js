@@ -12,8 +12,11 @@ const globalReducer = (state, action) => {
             return {...state, answers: newAnswers};
         case 'delete_answer': //TODO
             return {...state, answers: action.payload.answers};
-        case 'add_vote': //TODO
-            return {...state, }
+        case 'add_vote':
+            let newAnswersArray = state.answers.map(ans => {
+                return action.payload.answer === ans.answer ? Object.assign({}, ans, { score: ans.score + 1} ) : ans;
+              });
+              return {...state, answers: newAnswersArray, voteCount: state.voteCount + 1}
         case 'reset_poll':
             return { question: '', answers: [], isCreated: false };
         default:
@@ -34,9 +37,8 @@ const deleteAnswer = dispatch => (answers) => {
     dispatch({ type: 'delete_answer', payload: {answers: answers}});
 }
 
-// TODO
 const addVote = dispatch => (answer) => {
-    dispatch({ type: 'add_vote'})
+    dispatch({ type: 'add_vote', payload: {answer: answer}})
 }
 
 const resetPoll = dispatch => () => {
@@ -45,6 +47,6 @@ const resetPoll = dispatch => () => {
 
 export const { Provider, Context } = createDataContext(
     globalReducer,
-    {createPoll, addAnswer, deleteAnswer, resetPoll},
-    { question: '', answers: [], isCreated: false }
+    {createPoll, addAnswer, deleteAnswer, addVote, resetPoll},
+    { question: '', answers: [], isCreated: false, voteCount: 0 }
 );
