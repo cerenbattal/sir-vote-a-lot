@@ -1,4 +1,4 @@
-import Body from './components/Body';
+import Body from './pages/Body';
 import Header from './components/header/Header';
 import { Provider } from './context/GlobalContext';
 
