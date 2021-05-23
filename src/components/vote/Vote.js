@@ -16,14 +16,14 @@ export default function Vote() {
                             </div>
                             {state.answers.map((ans) => {
                                 return (
-                                    <div className="field">
-                                        <div className="ui checkbox">
-                                            <input name={`checkbox-${ans.answer}`} type="checkbox" key={ans.id} onChecked={
+                                    <div key={ans.id} className="field">
+                                        <div className="ui radio checkbox">
+                                            <input type="radio" name="radio" key={ans.id} onClick={
                                                 () => {
-                                                    setCheckedAnswer(ans.answer)
+                                                    setCheckedAnswer(ans.id)
                                                 }
                                             }/>
-                                            <label for={`checkbox-${ans.answer}`}>{ans.answer}</label>
+                                            <label>{ans.answer}</label>
                                         </div>
                                     </div>
                                 );
@@ -34,15 +34,18 @@ export default function Vote() {
                         <div className="small ui right floated button"
                             onClick={
                                 () => {
-                                    console.log(checkedAnswer)
                                     addVote(checkedAnswer);
-                                    setCheckedAnswer('');
                                 }
                             }
                         >Vote</div>
                     </div>
                 </>
-            ) : 'has not created yet!'}
+            ) : (
+                <div className="no-vote-text">
+                    <i id="vote-icon" className="tasks icon"></i>
+                    <p>Your poll will appear here!</p>
+                </div>
+            )}
         </div>
     )
 }

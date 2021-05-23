@@ -11,3 +11,23 @@
     float: left;
     margin-left: 0.5em;
 }
+
+.no-chart-text {
+    display: block;
+    font-size: 24px;
+    padding: 1.5em;
+    color: #E3866C;
+    text-shadow: 0 0 3px rgba(0,0,0,0.2);
+}
+
+.no-chart-text:hover {
+    animation: swing;
+    animation-duration: 1s;
+}
+
+.no-chart-text > i{
+    font-size: 36px;
+    margin-bottom: 10px;
+    animation: swing;
+    animation-duration: 2s;
+}

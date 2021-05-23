@@ -15,7 +15,12 @@ export default function Chart() {
                     <p>Total votes: {state.voteCount}</p>
                 </div>
                 </>
-            ) : 'has not created yet!'}
+            ) : (
+                <div className="no-chart-text">
+                    <i className="percent icon"></i>
+                    <p>Your chart will appear here!</p>
+                </div>
+            )}
         </div>
     )
 }

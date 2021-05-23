@@ -8,15 +8,13 @@ export default function SimpleBarChart() {
     const data = state.answers;
 
     return (
-        <ResponsiveContainer width={'99%'} height={300} aspect={1}>
+        <ResponsiveContainer width={'99%'} height={300} aspect={0.85}>
             <BarChart
                 width={450}
                 height={500}
-                data={data}
+                data={data.slice()}
                 margin={{
                     top: 5,
-                    right: 30,
-                    left: 20,
                     bottom: 5,
                 }}
             >
