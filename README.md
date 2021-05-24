@@ -44,5 +44,11 @@ $ npm run build
 - To visit app:
 
 ```bash
+
 localhost:3000
+```
+- Start tests:
+
+```bash
+$ npm run test
 ```
