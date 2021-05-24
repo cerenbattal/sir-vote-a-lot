@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="header"
+  data-testid="header-test"
+>
+  <i
+    className="edit outline icon"
+  />
+  <h1>
+    Sir vote-a-lot
+  </h1>
+</div>
+`;
