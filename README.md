@@ -7,8 +7,7 @@ Sir Vote-a-lot is a simple poll application. On the first section (left side), t
 - [Semantic UI](https://semantic-ui.com/) for user interface of the components.
 - [Google Fonts - Pattaya](https://fonts.google.com/specimen/Pattaya#standard-styles) for header logo.
 - [Animate.css](https://animate.style/) for icon animation.
-- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) for testing.
-- [@testing-library/jest-dom](https://www.npmjs.com/package/@testing-library/jest-dom) for testing.
+- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) and [@testing-library/jest-dom](https://www.npmjs.com/package/@testing-library/jest-dom) for testing.
 - [Recharts](https://recharts.org/en-US/) for chart of the poll.
 
 ## Try it out
