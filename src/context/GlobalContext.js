@@ -1,6 +1,5 @@
 import createDataContext from './createDataContext';
 
-//return {...state, answers: answers.filter(ans => indexOf(ans) === action.payload.id)};
 
 const globalReducer = (state, action) => {
     switch(action.type) {
